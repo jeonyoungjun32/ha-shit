@@ -1,0 +1,473 @@
+﻿@charset "utf-8";
+/*초기화 부분*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ a {
+     text-decoration: none;
+ }
+html {
+    scroll-behavior: smooth;/*스크롤 부드럽게 사용*/
+}
+ul {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.header_btn_box {
+    width: 30px; height: 30px;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 20;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+ /*header*/
+ .header {
+     width: 100%;
+     overflow: hidden;
+     position: fixed;
+     top:0; left: 0;
+     z-index: 1;
+     background-color: white;
+ }
+ 
+ .header_top {
+     width: 100%;
+ }
+ /*header scroll_box*/
+ .header .scroll_box {
+     width: 330px;
+     float: left;
+     height: 133px;
+     line-height: 133px;
+     margin-left: 30px;
+     text-align: center;
+     font-weight: bold;
+}
+.scroll_box > ul > li {
+    float: left;
+    width: auto;
+    margin-right: 20px;
+}
+
+.scroll_box a {
+    color: black;
+}
+
+.scroll_box  a:hover {
+    color: red;
+}
+
+ /*header logo*/
+.header .logo_img {
+    position: absolute;
+    top:0; left:50%;
+    margin-left:-80px;
+}
+
+/*header login*/
+ .header .login_box {
+    float: right;
+    width: auto;
+    height: 133px;
+ }
+ .header .login_box a {
+     margin-right: 20px;
+     line-height: 133px;
+ }
+
+ .header .login_box a {
+    color:black;
+ }
+ .header .login_box a:hover {
+    color :red;
+ }
+ .header .text_box {
+    width: 500px;
+    float: right;
+}
+/*search_box*/
+ .header .search_box {
+    float: right;
+    width: auto;
+    height: 133px;
+    line-height: 133px;
+    margin-right: 30px;
+}
+/*button*/
+.button {
+    display: none;
+}
+.button > img{
+    display: none;
+}
+/*nav*/
+.header .nav {
+    width: 1200px;
+    overflow: hidden;
+    margin:auto;
+    margin-top: 140px;
+}
+.header .nav > ul > li{
+     float: left;
+     margin-left: 20px;
+     margin-right: 20px;
+     padding: 0 10px;
+     font-weight: bold;
+ }
+ .header .nav_li {
+     height: 30px;
+     overflow: hidden;
+     transition-duration: 0.5s;
+     text-align: center;
+     cursor: default;
+     line-height: 30px;
+ }
+ .header .nav_li:hover {
+     height: 200px;
+     background-color: lightblue;
+     margin-bottom: 10px;
+ }
+ .header .nav_li p {
+     margin-bottom: 20px;
+ }
+ .header .nav_li a {
+     line-height: 30px;
+     color: black;
+ }
+ .header .nav_li a:hover {
+     color: red;
+}
+.header_backgound {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    background-image: url("../img/header_background.jpeg");/*밝은 구름 이미지 구해야함*/
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+}
+.header_backgound > .opacity_bottom {
+    position: absolute;
+    bottom: 0; left:0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgba(255,255,255,1),rgba(255, 255, 255, 0) 60%);
+}
+
+/*안보이게 left으로 처리 depaly속성이 안됨*/
+.aside {
+    position: absolute;
+    top:0; left:-9999px;
+}
+#article {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+#article .img_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#article .img_box .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#article > .bottom_button {
+    position: absolute;
+    bottom: 5%; left:0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+#article > .bottom_button > a {
+    display: inline-block;
+    color: white;
+    height: 10px;
+    width: 10px;
+    font-size: 0vw;
+    margin:0 20px;
+    border-radius: 10px;
+    background: white;
+    transition-duration: 0.3s;
+}
+#article > .bottom_button > a:hover {
+    opacity: 0.5;
+}
+#article > .opacity_top {
+    position: absolute;
+    top: 0; left:0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255,255,255,1),rgba(255, 255, 255, 0) 40%);
+}
+#article > .opacity_bottom {
+    position: absolute;
+    bottom: 0; left:0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255,255,255,1),rgba(255, 255, 255, 0) 60%);
+}
+#section {
+    width: 100%;
+    padding-top:175px;
+    overflow: hidden;
+    background: linear-gradient(white,skyblue,white);
+}
+.test {
+    border:3px solid black;
+    border-radius: 30px;
+    width: 300px;
+    height: 300px;
+    animation: fadein 3s;
+    position: relative;
+    cursor: pointer;
+}
+.test > .ice {
+    position: absolute;
+    top:0; left:50%;
+    margin-left: -100px;
+    width: 200px;
+    z-index: 1;
+}
+.test > .con {
+    position: absolute;
+    top:150px; left:50%;
+    width: 100px;
+    margin-left: -50px;
+    z-index: 0;
+}
+#footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: gray;
+    color: white;
+}
+#footer .copright {
+    float: left;
+    width: 500px;
+    margin-left: 20px;
+    margin-top: 50px;
+    height: auto;
+}
+
+#footer .link {
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 50px inset;
+    float: right;
+    width: 300px;
+    height: 120px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+}
+
+/*연결 페이지*/
+#footer .link a{
+    display: block;
+    float: left;
+    margin-right: 30px;
+    width: 60px;
+    height: 60px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+#footer .link a:nth-of-type(1) {
+    margin-left: 30px;
+}
+#footer .link a:nth-of-type(4) {
+    margin-left: 30px;
+}
+#footer .link .facebook_logo {
+    background-image:url('../img/logo/logo.png');
+    background-position: -13px -13px;
+}
+#footer .link .instagram_logo {
+    background-image:url('../img/logo/logo.png');
+    background-position: -73px -13px;
+}
+#footer .link .naver_logo {
+    background-image:url('../img/logo/logo.png');
+    background-position: -13px -73px;
+}
+#footer .link .kakao_logo {
+    background-image:url('../img/logo/logo.png');
+    background-position: -133px -73px;
+}
+#footer .link .twitter_logo {
+    background-image:url('../img/logo/logo.png');
+    background-position: -133px -133px;
+}
+
+/*1280해상도 전용*/
+@media only screen and (max-width:1280px) {
+    .header {
+        height: 170px;
+    }
+    .header .nav {
+        display: none;
+    }
+    .header .text_box {
+        display: none;
+    }
+    .button {
+        display: block;
+        position: absolute;
+        top: 20%; right:250px;
+    }
+    .button img {
+        display: block;
+    }
+    .aside {
+    /* display:block; 1280이상 해상도일때 none 처리한것을 블럭으로 표기*/
+        position: fixed;
+        top:0; right:-250px;
+        left:inherit;
+        width: 305px;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    .aside .text_box {
+        width: 250px;
+        float: right;
+        border-left: 1px solid black;
+        background-color: lightgray;
+    }
+    .aside .login_box {
+        width: 250px;
+        height: 30px;
+        margin-right: 0;
+        margin-top: 0;
+     }
+     
+     .aside .login_box a {
+        color:black;
+        margin-left: 60px;
+        line-height: 30px;
+     }
+     .aside .login_box a:nth-of-type(2) {
+        margin-left: 40px;
+     }
+     .aside .login_box a:hover {
+        color :red;
+     }
+     .aside .search_box {
+        width: 250px;
+        height: 30px;
+        line-height: 0;
+        margin-right: 0;
+    }
+    .aside .search_box {
+        padding-left: 20px;
+    }
+    .aside .search_box input[type="text"] {
+        margin-right: -10px;
+    }
+    .aside .nav {
+        border-left: 1px solid black;
+        position: absolute;
+        top:0; right:0;
+        margin-top: 60px;
+        width: 250px;
+        height: 100%;
+        overflow: hidden;
+        background-color: lightgray;
+    }
+    .aside .nav > ul > li{
+         float: right;
+         margin-left: 0;
+         margin-right:0;
+         width: 250px;
+     }
+     .aside .nav_li {
+         height: 30px;
+         overflow: hidden;
+         text-align: center;
+         cursor: default;
+         line-height: 30px;
+         transition-duration:0.5s;
+     }
+     .aside .nav_li:hover {
+     	height:160px;
+        cursor: pointer;
+     }
+
+     .aside .nav_li p {
+         margin-bottom: 0px;
+     }
+     .aside .nav_li a {
+         line-height: 30px;
+         color: black;
+     }
+     .aside .nav_li a:hover {
+         color: red;
+    }
+    #footer {
+        text-align: center;
+    }
+    #footer .copright {
+        float: none;
+        width: 500px;
+        margin: 20px auto;
+    }
+    #footer .link_box {
+        position: relative;
+    }
+    #footer .color {
+        position: absolute;
+        top:-30px; left: 50%;
+        margin-left: -150px;
+        width: 300px;
+        height: 120px;
+        background-color: white;
+    }
+    #footer .link {
+        float: none;
+        width: 300px;
+        margin: 20px auto;
+        background-color: white;
+        border-radius: 30px;
+        position: relative;
+     }
+}
+
+/*767해상도 전용*/
+@media only screen and (max-width:767px) {
+    /*header*/
+    .scroll_box {
+        display: none;
+    }
+    .header .logo_img {
+        z-index: -1;
+    }
+/*모바일 전용 버튼 따로*/
+    /* .button {
+        display: none;
+    }
+    .button > img{
+        display: none;
+    } */
+}
+
+/*회원 정보 article*/
+#article_logininfo {
+	width: 100%;
+	overflow:hidden;
+	background-color: yellow;
+}
